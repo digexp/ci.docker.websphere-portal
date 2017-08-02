@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<agent-input>
+  <variables>
+    <variable name='sharedLocation' value='/opt/IBM/IMShared'/>
+  </variables>
+  <server>
+    <repository location='{FTP MEDIA URL}/SETUP/products/IFPI59896/8.5.0.0-WP-Server-IFPI59896.zip'/>
+    <repository location='{FTP MEDIA URL}/SETUP/products/WP8500CF13_Server'/>
+    <repository location='{FTP MEDIA URL}/SETUP/products/WP90_Portal'/>
+    <repository location='{FTP MEDIA URL}/SETUP/products/WP90_WCM'/>
+    <repository location='{FTP MEDIA URL}/SETUP/products/JDK803'/>
+    <repository location='{FTP MEDIA URL}/SETUP/products/WASND90'/>
+    <repository location='{FTP MEDIA URL}/SETUP/products/WP85_Server'/>
+    <repository location='{FTP MEDIA URL}/SETUP/products/WP85_WCM'/>
+  </server>
+  <profile id='IBM WebSphere Application Server V9.0' installLocation='/opt/IBM/WebSphere/AppServer'>
+    <data key='cic.selector.arch' value='x86_64'/>
+  </profile>
+  <install>
+    <!-- IBM WebSphere Application Server Network Deployment  9.0.0.2 -->
+    <offering profile='IBM WebSphere Application Server V9.0' id='com.ibm.websphere.ND.v90' version='9.0.2.20161108_1719' features='core.feature,ejbdeploy,thinclient,embeddablecontainer'/>
+    <!-- IBM SDK, Java Technology Edition, Version 8 8.0.3.20 -->
+    <offering profile='IBM WebSphere Application Server V9.0' id='com.ibm.java.jdk.v8' version='8.0.3020.20161024_1413' features='com.ibm.sdk.8'/>
+  </install>
+  <profile id='IBM WebSphere Portal Server V8.5' installLocation='/opt/IBM/WebSphere/PortalServer'>
+    <data key='cic.selector.arch' value='x86_64'/>
+    <data key='user.configengine.binaryLocation,com.ibm.websphere.PORTAL.SERVER.v85' value='/opt/IBM/WebSphere/ConfigEngine'/>
+    <data key='user.was.installLocation,com.ibm.websphere.PORTAL.SERVER.v85' value='/opt/IBM/WebSphere/AppServer'/>
+    <data key='user.wp.wasprofiles.location,com.ibm.websphere.PORTAL.SERVER.v85' value='/opt/IBM/WebSphere/AppServer/profiles'/>
+    <data key='user.cw.userid,com.ibm.websphere.PORTAL.SERVER.v85' value='wpsadmin'/>
+    <data key='user.cw.password,com.ibm.websphere.PORTAL.SERVER.v85' value='4taxKp1Gj5q5aCi+LjSKHQ=='/>
+    <data key='user.iim.currentlocale,com.ibm.websphere.PORTAL.SERVER.v85' value='en'/>
+    <data key='user.wp.base.offering,com.ibm.websphere.PORTAL.SERVER.v85' value='portal.server'/>
+    <data key='user.wp.hostname,com.ibm.websphere.PORTAL.SERVER.v85' value='localhost'/>
+    <data key='user.wp.cellname,com.ibm.websphere.PORTAL.SERVER.v85' value='dockerCell'/>
+    <data key='user.wp.nodename,com.ibm.websphere.PORTAL.SERVER.v85' value='dockerNode'/>
+    <data key='user.wp.userid,com.ibm.websphere.PORTAL.SERVER.v85' value='wpsadmin'/>
+    <data key='user.wp.password,com.ibm.websphere.PORTAL.SERVER.v85' value='4taxKp1Gj5q5aCi+LjSKHQ=='/>
+    <data key='user.wp.profilename,com.ibm.websphere.PORTAL.SERVER.v85' value='wp_profile'/>
+    <data key='user.wp.custom.contextroot,com.ibm.websphere.PORTAL.SERVER.v85' value='wps'/>
+    <data key='user.wp.custom.defaulthome,com.ibm.websphere.PORTAL.SERVER.v85' value='portal'/>
+    <data key='user.wp.custom.personalhome,com.ibm.websphere.PORTAL.SERVER.v85' value='myportal'/>
+    <data key='user.wp.starting.port,com.ibm.websphere.PORTAL.SERVER.v85' value='10012'/>
+    <data key='user.wp.profilepath,com.ibm.websphere.PORTAL.SERVER.v85' value='/opt/IBM/WebSphere/wp_profile'/>
+  </profile>
+  <install>
+    <!-- 8.5.0.0-WP-Server-IFPI59896 -->
+    <offering profile='IBM WebSphere Portal Server V8.5' id='8.5.0.0-WP-Server-IFPI59896'/>
+    <!-- IBM WebSphere Portal Server 8.5.0.0 
+    <offering profile='IBM WebSphere Portal Server V8.5' id='com.ibm.websphere.PORTAL.SERVER.v85' version='8.5.0.20140424_2155' features='ce.install,portal.binary,portal.profile'/> -->
+    <offering profile='IBM WebSphere Portal Server V8.5' id='com.ibm.websphere.PORTAL.SERVER.v85' version='8.5.0.20140424_2155' features='ce.install,portal.binary,portal.profile'/>
+    <!-- IBM WebSphere Web Content Manager 8.5.0.0 -->
+    <offering profile="IBM WebSphere Portal Server V8.5" id="com.ibm.websphere.PORTAL.WCM.v85" features="enable.upsell"/>
+  </install>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+</agent-input>
