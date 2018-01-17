@@ -14,9 +14,9 @@
     <data key='user.cw.password,com.ibm.websphere.PORTAL.SERVER.v85' value='4taxKp1Gj5q5aCi+LjSKHQ=='/>
     <data key='user.wp.base.offering,com.ibm.websphere.PORTAL.SERVER.v85' value='portal.server'/>
     <data key='user.iim.currentlocale,com.ibm.websphere.PORTAL.SERVER.v85' value='en'/>
-    <data key='user.wp.hostname,com.ibm.websphere.PORTAL.SERVER.v85' value='90-cf13-template.rtp.raleigh.ibm.com'/>
-    <data key='user.wp.cellname,com.ibm.websphere.PORTAL.SERVER.v85' value='90-cf13-templateCell'/>
-    <data key='user.wp.nodename,com.ibm.websphere.PORTAL.SERVER.v85' value='90-cf13-templateNode'/>
+    <data key='user.wp.hostname,com.ibm.websphere.PORTAL.SERVER.v85' value='localhost'/>
+    <data key='user.wp.cellname,com.ibm.websphere.PORTAL.SERVER.v85' value='dockerCell'/>
+    <data key='user.wp.nodename,com.ibm.websphere.PORTAL.SERVER.v85' value='dockerNode'/>
     <data key='user.wp.userid,com.ibm.websphere.PORTAL.SERVER.v85' value='wpsadmin'/>
     <data key='user.wp.password,com.ibm.websphere.PORTAL.SERVER.v85' value='4taxKp1Gj5q5aCi+LjSKHQ=='/>
     <data key='user.wp.custom.contextroot,com.ibm.websphere.PORTAL.SERVER.v85' value='wps'/>
